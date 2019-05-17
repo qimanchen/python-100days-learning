@@ -9,5 +9,7 @@
 python3 -- tkinter
 python3 before -- Tkinter
 
+三种布局管理器：placer,packer,grid
+
 
 """
