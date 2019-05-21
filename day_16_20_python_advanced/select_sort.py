@@ -12,6 +12,7 @@
 def select_sort(origin_items, comp=lambda x, y: x<y):
 	"""
 	简单选择排序
+	每一轮循环找出最小一个插入到已排序好的序列内
 	:param origin_items : 目标数列
 	"""
 
