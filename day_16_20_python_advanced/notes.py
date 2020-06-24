@@ -31,7 +31,7 @@ prices2 = {key: value for key, value in prices.items() if value > 100}
 
 
 *** 函数的使用方法：
-
+函数可以赋值给变量，可以作为参数，可以作为函数的返回值
 
 
 """

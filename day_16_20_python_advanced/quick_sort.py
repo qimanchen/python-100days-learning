@@ -76,3 +76,44 @@ def __quick_sort(origin_items, start, end):
 		__quick_sort(items, start, i-1)
 		__quick_sort(items, j+1, end)
 	return items
+
+def mergeSort(lst):
+	# 
+	if len(lst) < 2:
+		return lst
+	midIndex = int(len(lst)/2)
+	left, right = lst[:midIndex], lst[midIndex:]
+	return merge(mergeSort(left),mergeSort(right))
+	
+def merge(left, right):
+	result = []
+	
+	while left and right:
+		if left[0] <= right[0]:
+			result.append(left.pop(0))
+		else:
+			result.append(right.pop(0))
+	while left:
+		result.append(left.pop(0))
+	while right:
+		result.append(right.pop(0))
+	return result
+	
+def quickSort(lst):
+	# 快排
+	if len(lst) < 2:
+		return lst
+	
+	midNum = lst[0]
+	
+	less = [lst[i] for i in range(1, len(lst)) if lst[i] <= midNum]
+	large = [lst[i] for i in range(1, len(lst)) if lst[i] > midNum]
+	
+	return quickSort(less) + [midNum] + quickSort(large)
+
+def main():
+	a = [3,1,34,4,2,56,98,0]
+	print(mergeSort(a))
+	
+if __name__ == "__main__":
+	main()

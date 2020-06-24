@@ -85,4 +85,7 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+	a = input().strip()
+	while a:
+		a = input().strip()
+
